@@ -39,6 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+LOCAL_APPS = [
+    'api',
+]
+
+THIRD_APPS = [
+    'rest_framework',
+    'corsheaders',
+    'rest_framework_simplejwt',
+]
+
+INSTALLED_APPS += LOCAL_APPS + THIRD_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
