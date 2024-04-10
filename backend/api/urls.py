@@ -6,4 +6,4 @@ router.register(r'products', ProductViewSet)
 router.register(r'carts', CartViewSet)
 router.register(r'cart_products', CartProductViewSet)
 
-url_patterns = router.urls
+urlpatterns = router.urls
