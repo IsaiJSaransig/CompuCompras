@@ -1,0 +1,52 @@
+<form action="" [formGroup]="loginForm" class="form-card">
+    <div>
+        <p class="title">Login</p>
+    </div>
+    <div class="form-input">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" placeholder="Nombre de usuario" id="username"
+        class="form-control" formControlName="usernameFormControl" 
+        [class.is-invalid]="usernameFormControl.invalid && usernameFormControl.touched">
+        @if(usernameFormControl.invalid && usernameFormControl.touched){
+            <div class="invalid-input">
+                <p>El nombre de usuario es obligatorio</p>
+            </div>
+        }
+    </div>
+
+    <div class="form-input">
+        <label for="email">Correo electrónico</label>
+        <input type="email" placeholder="Email" id="email" class="form-control"
+        formControlName="emailFormControl" [class.is-invalid]="emailFormControl.invalid && emailFormControl.touched">
+        @if(emailFormControl.invalid && emailFormControl.touched){
+            <div class="invalid-input">
+                <p>El correo es obligatorio</p>
+            </div>
+        }
+    </div>
+
+    <div class="form-input">
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Contraseña" id="password" class="form-control"
+        formControlName="passwordFormControl" [class.is-invalid]="passwordFormControl.invalid && passwordFormControl.touched">
+        @if(passwordFormControl.invalid && passwordFormControl.touched){
+            <div class="invalid-input">
+                <p>La contraseña es obligatoria</p>
+            </div>
+        }
+    </div>
+
+    <div class="button-group">
+        <button
+          type="submit"
+          class="button-login"
+          [disabled]="loginForm.invalid">
+          Iniciar Sesion
+        </button>
+      </div>
+    <div class="registerDiv">
+      ¿No tienes cuenta?
+        <a routerLink="register" class="register">Registrate aquí</a> 
+    </div>
+
+</form>
