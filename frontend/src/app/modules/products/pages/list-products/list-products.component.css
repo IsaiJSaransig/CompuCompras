@@ -1,0 +1,10 @@
+.list-products{
+    display: flex;
+    padding: 30px 45px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    & .card-product{
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+}

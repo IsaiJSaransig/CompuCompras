@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+    .cart-div{
+        @apply border border-gray-400 rounded-sm min-w-[400px] w-[100%] sm:w-3/6 flex
+    }
+}
+
+.cart-div{
+    border: 1px solid gray;
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    min-width: 400px;
+}
+
+
+.img-cart{
+    width: 40%;
+    border-radius: 20px 0px 0px 20px;
+}
+.information{
+    padding: 15px;
+}
+.title{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.description{
+    margin: 5px 0px;
+}
+

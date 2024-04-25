@@ -1,1 +1,7 @@
-<p>list-products works!</p>
+<app-header></app-header>
+
+<div class="list-products">
+    @for (product of products; track $index) {
+        <app-card-information [product] = "product"></app-card-information>
+    }
+</div>

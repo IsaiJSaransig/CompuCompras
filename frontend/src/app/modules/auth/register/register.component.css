@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .registerForm{
+        @apply border sm:w-3/12 w-screen rounded-md mt-24 mx-auto p-10 bg-white
+    }
+    .title{
+        @apply text-center font-bold text-3xl mb-5
+    }
+    .input-form{
+        @apply mb-5
+    }
+    .form-control{
+        @apply w-full border border-gray-200 p-1
+    }
+    .not-valid p{
+        @apply text-red-500
+    }
+    .btn-form{
+        @apply text-center
+    }
+    .bnt-send{
+        @apply bg-blue-600 text-white py-1 px-2 rounded-md
+    }
+    .disabled{
+        @apply bg-blue-400 text-white py-1 px-2 rounded-md
+    }
+    
+}

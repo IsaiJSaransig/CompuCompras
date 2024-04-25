@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .button{
+        @apply bg-blue-600 text-white py-1 px-2 rounded-md
+    }
+    .disabled{
+        @apply bg-blue-400 text-white py-1 px-2 rounded-md
+    }
+}

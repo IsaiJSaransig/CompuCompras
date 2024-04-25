@@ -37,13 +37,8 @@
     </div>
 
     <div class="button-group">
-        <button
-          type="submit"
-          class="button-login"
-          [disabled]="loginForm.invalid">
-          Iniciar Sesion
-        </button>
-      </div>
+        <app-button-auth [text]="'Ingresar'" [disabled]="loginForm.invalid"/>
+    </div>
     <div class="registerDiv">
       ¿No tienes cuenta?
         <a routerLink="register" class="register">Registrate aquí</a> 

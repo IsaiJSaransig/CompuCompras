@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ButtonAuthComponent } from '@shared/components/button-auth/button-auth.component';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ButtonAuthComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

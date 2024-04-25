@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+    .navigation{
+        @apply bg-black p-8
+    }
+    .title{
+        @apply text-white text-3xl inline-block
+    }
+    .button-nav{
+        @apply bg-black text-white border-2 border-white rounded-md py-1 px-4 mr-0
+    }
+    .button-nav:hover{
+        @apply bg-white text-black border-2 border-black rounded-lg py-1 px-4 
+    }
+    .nav-options{
+        @apply bg-white border-b
+    }
+    
+    .options a{
+        @apply inline-block border-r p-3 text-lg
+    }
+
+    .options a:hover{
+        @apply bg-black text-white
+    }
+}

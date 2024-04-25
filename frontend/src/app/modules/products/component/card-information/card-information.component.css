@@ -13,20 +13,25 @@
     }
 
     .card-information img{
-        @apply rounded-md
+        @apply rounded-md h-2/5 w-4/5 mx-auto
     }
 
     .title{
-        @apply text-2xl font-bold mt-2
+        @apply text-xl font-bold mt-2
     }
     .description{
         @apply py-2
     }
+
+    .btn {
+        @apply py-1 px-4 rounded mt-2 border border-black
+    }
+    
     .sale-button{
-        @apply bg-black text-white py-1 px-4 rounded mt-2
+        @apply bg-black text-white
     }
     .sale-button:hover{
-        @apply bg-white text-black py-1 px-4 rounded border border-black
+        @apply bg-white text-black
     }
 
 }
