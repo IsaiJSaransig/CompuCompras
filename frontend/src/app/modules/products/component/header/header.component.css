@@ -18,11 +18,14 @@
         @apply bg-white border-b
     }
     
-    .options a{
+    .options button{
         @apply inline-block border-r p-3 text-lg
     }
+    .selected{
+        @apply bg-black text-white
+    }
 
-    .options a:hover{
+    .options button:hover{
         @apply bg-black text-white
     }
 }

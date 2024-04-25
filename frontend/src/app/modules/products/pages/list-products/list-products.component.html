@@ -1,7 +1,27 @@
-<app-header></app-header>
+<app-header (category)="changeCategory($event)"></app-header>
 
 <div class="list-products">
-    @for (product of products; track $index) {
-        <app-card-information [product] = "product"></app-card-information>
+    @switch (category()) {
+        @case('destacadas') {
+            @for (product of destacados; track $index) {
+                <app-card-information [product]="product"></app-card-information>
+            }
+
+        } 
+        @case('ofertas') {
+            @for (product of ofertas; track $index) {
+                <app-card-information [product]="product"></app-card-information>
+            }
+        }
+        @case('novedades') {
+            @for (product of nuevos; track $index) {
+                <app-card-information [product]="product"></app-card-information>
+            }
+        }
+        @default {
+            @for (product of destacados; track $index) {
+                <app-card-information [product]="product"></app-card-information>
+            }
+        }
     }
 </div>

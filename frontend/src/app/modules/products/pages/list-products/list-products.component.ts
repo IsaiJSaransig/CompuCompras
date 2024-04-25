@@ -13,8 +13,21 @@ import { GetProductDto } from '../../../../dtos/get-product.dto';
 })
 export class ListProductsComponent {
   constructor(private productService: ProductServicesService) { }
-  protected products: GetProductDto[] = [];
+  private products: GetProductDto[] = [];
+  category = signal<string>('');
+  destacados: GetProductDto[] = this.products.filter((product: GetProductDto) => product.category === 'destacada');
+  nuevos: GetProductDto[] = this.products.filter((product: GetProductDto) => product.category === 'nueva');
+  ofertas: GetProductDto[] = this.products.filter((product: GetProductDto) => product.category === 'oferta');
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(products => this.products = products);
+    this.productService.getProducts().subscribe(products => 
+      {this.products = products
+        this.destacados = this.products.filter((product: GetProductDto) => product.category === 'destacada');
+        this.nuevos = this.products.filter((product: GetProductDto) => product.category === 'nueva');
+        this.ofertas = this.products.filter((product: GetProductDto) => product.category === 'oferta');
+      });
+
+  }
+  changeCategory(category: string) {
+    this.category.set(category);
   }
 }
